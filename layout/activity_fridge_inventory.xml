@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#FFFFFF" tools:context=".FridgeInventory">
+    <!--  Header with Back Icon and Title  -->
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#FFFFFF" android:padding="10dp" android:id="@+id/header">
+        <ImageView android:id="@+id/back_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true" android:layout_marginStart="16dp" android:layout_marginBottom="0dp" android:layout_marginTop="20dp" android:contentDescription="Back" android:src="@drawable/back"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginTop="50dp" android:text="Fridge Inventory" android:textColor="#708238" android:textSize="20sp" android:textStyle="bold"/>
+    </RelativeLayout>
+    <!--  Fridge Image with Broccoli Positioned  -->
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/header" android:layout_centerHorizontal="true" android:id="@+id/fridge_section">
+        <!--  Broccoli Position (Adjust as Needed)  -->
+        <ImageView android:id="@+id/fridge_image" android:layout_width="match_parent" android:layout_height="500dp" android:layout_marginTop="-100dp" android:layout_marginEnd="0dp" android:layout_marginBottom="0dp" android:contentDescription="Fridge Image" android:src="@drawable/fridge"/>
+        <ImageView android:id="@+id/broccoli_icon" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginStart="135dp" android:layout_marginTop="115dp" android:contentDescription="Broccoli Image" android:src="@drawable/brocoli"/>
+        <ImageView android:id="@+id/milk_icon" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginStart="210dp" android:layout_marginTop="135dp" android:contentDescription="Milk Image" android:src="@drawable/milk"/>
+        <ImageView android:id="@+id/apple_icon" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginStart="60dp" android:layout_marginTop="115dp" android:contentDescription="Apple Image" android:src="@drawable/apple"/>
+    </RelativeLayout>
+    <!--  Input Field and Add Button  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="0dp" android:layout_below="@id/fridge_section" android:layout_marginHorizontal="16dp" android:layout_marginTop="-70dp" android:background="@drawable/green_rectangle" android:gravity="center" android:orientation="horizontal" android:id="@+id/product_title">
+        <EditText android:id="@+id/product_name_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:background="#F0FFE9" android:textColor="#64735D" android:text="Product Name" android:padding="10dp" android:textStyle="bold" android:textSize="18sp"/>
+        <ImageButton android:id="@+id/add_product_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="190dp" android:backgroundTint="#F0FFE9" android:contentDescription="Add Product" android:src="@drawable/plus"/>
+    </LinearLayout>
+    <!--  List of Items in the Fridge  -->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Items in Fridge" android:textColor="#000000" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="10dp" android:layout_below="@id/product_title" android:layout_marginStart="16dp"/>
+    <ListView android:id="@+id/fridge_items_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/product_title" android:layout_marginTop="30dp" android:divider="#E0E0E0" android:dividerHeight="1dp"/>
+</RelativeLayout>

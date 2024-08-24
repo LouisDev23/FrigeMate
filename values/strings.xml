@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FridgeMate</string>
+    <string name="recipe_image_desc">Description</string>
+    <string name="recipe_title">Recipe Title</string>
+    <string name="recipe_description" />
+    <string name="recipes">Recipes</string>
+    <string name="scan">Scan</string>
+    <string name="fridge">Fridge</string>
+    <string name="store">Store</string>
+    <string name="logo_desc">logo descript</string>
+</resources>
